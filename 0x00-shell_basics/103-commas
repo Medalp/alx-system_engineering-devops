@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -ap1 | awk 'BEGIN{ORS=","} {if ($0 == "./" || $0 == "../") print $0; else print}' | awk -F/ '{print ($NF == "" ? $0 : $NF)}' | sort -n -t'.' -k1,1 -k2 -k3 -k4 | sed 's/,$/\n/'
