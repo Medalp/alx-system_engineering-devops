@@ -1,4 +1,1 @@
 #!/bin/bash
-set | grep -v '^_' | grep -E '^[a-zA-Z_][a-zA-Z0-9_]*='
-compgen -A function
-
