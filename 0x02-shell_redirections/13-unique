@@ -1,2 +1,2 @@
 #!/bin/bash
-awk '++count[$0] == 1' | sort
+sort | uniq -u
